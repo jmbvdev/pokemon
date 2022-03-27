@@ -5,11 +5,11 @@ import "../PokemonsInfo/pokemonsInfo.css"
 
 const PokemonsInfo = ({pokemonUrl}) => {
     const[pokemonInfo, setPokemonInfo]= useState({})
+    
 
     useEffect(()=>{
         axios.get(pokemonUrl)
         .then(res=>setPokemonInfo(res.data))
-
     },[pokemonUrl])
 
  

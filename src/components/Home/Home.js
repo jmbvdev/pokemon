@@ -8,7 +8,8 @@ const Home = () => {
     const dispatch= useDispatch()
    const navigate= useNavigate()
 
-    const submit =()=>{
+    const submit =e=>{
+        e.preventDefault()
         dispatch({
             type: "SET_NAME",
             payload: name
@@ -21,11 +22,13 @@ const Home = () => {
     return (
         <div>
             <h1>WELCOME TRAINER</h1>
-            <input type="text"
-            value={name}
-            onChange={e=> setName(e.target.value)}
-            />
-            <button onClick={submit}>Submit</button>
+            <form onSubmit={submit}>
+                <input type="text"
+                value={name}
+                onChange={e=> setName(e.target.value)}
+                />
+                <button>Submit</button>
+            </form>
         </div>
     );
 };
