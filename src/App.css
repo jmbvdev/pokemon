@@ -1,0 +1,28 @@
+.pokeball-background{
+    background-image: url(https://mypokedex101.netlify.app/static/media/pokeball.81cfacf9.png);
+    height: 300px;
+    width: 300px;
+    z-index: -1;
+    position: fixed;
+    background-size: cover;
+    filter: brightness(180%);
+    right: -90px;
+    top: -40px;
+    -webkit-animation: 3s rotate linear infinite;
+    animation: 3s rotate linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+@keyframes rotate {from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}}
+@-webkit-keyframes rotate {from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}}
+
+@media only screen and (min-width: 760px) {
+    .pokeball-background{
+    height: 500px;
+    width: 500px;
+    right: -150px;
+    top: -150px;
+    }
+  }

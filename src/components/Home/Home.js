@@ -20,14 +20,20 @@ const Home = () => {
     }
 
     return (
-        <div>
-            <h1>WELCOME TRAINER</h1>
-            <form onSubmit={submit}>
+        <div className="home-container">
+            <div className="home-welcome">
+                 <h2>WELCOME TRAINER!</h2>
+                 <img src="https://www.seekpng.com/png/full/345-3459799_starmetroids-vgc-2015-retrospective-pokemon-alpha-sapphire-trainer.png" alt="" />
+                 <p>Give me your name to start</p>
+            </div>
+            <form onSubmit={submit} className="home-form">
+                <div>
                 <input type="text"
                 value={name}
                 onChange={e=> setName(e.target.value)}
                 />
-                <button>Submit</button>
+                <button><i className="fa-solid fa-play"></i></button>
+                </div>
             </form>
         </div>
     );

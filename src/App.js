@@ -8,6 +8,9 @@ import ProtectedRoutes from './components/ProtectedRoutes';
 function App() {
   return (
     <HashRouter>
+      <div className='app'>
+        <div className='pokeball-background'></div>
+      </div>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route element={<ProtectedRoutes/>}>

@@ -1,0 +1,29 @@
+.pokemon-link{
+    text-decoration: none;
+}
+.pokemon-card{
+    display: flex;
+    width: 100%;
+    min-width: 250px;
+    height: auto;
+    padding: 0px 0px 0px 15px;
+    border-radius: 30px;
+    margin-top: 30px;
+    background-color: aqua;
+}
+.pokemon-card img{
+    width: 100px;
+}
+.pokemon-specs{
+    color: #fff;
+    text-shadow: 0 0 1.4px #000;
+}
+.pokemon-specs p{
+    background: hsla(0,0%,100%,.2);
+    padding: 0px 8px;
+    margin-bottom: 10px;
+    margin-top: 0;
+    border-radius: 13px;
+    margin: 0 0 1em;
+    line-height: 1em;
+}

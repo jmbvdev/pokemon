@@ -15,11 +15,12 @@ const PokemonsList = () => {
    
 
     ///Pagination
-    const pokemonsPerPage=4;
+    const pokemonsPerPage=6;
     const lastPokemonIndex= page* pokemonsPerPage;
     const firstPokemonIndex=lastPokemonIndex-pokemonsPerPage;
     const paginatedPokemons= pokemons.slice(firstPokemonIndex,lastPokemonIndex);
     const totalPages=Math.ceil(pokemons.length/pokemonsPerPage);
+    const[toggleCircle, setToggleCircle]= useState(false)
     let pagesNumber=[];
     
     for (let i = 1; i <= totalPages; i++) {
@@ -51,34 +52,51 @@ const PokemonsList = () => {
   
 
     return (
-        <div>
-            <h1>Welcome {trainer}</h1>
-             <select onChange={e=>filterTypes(e.target.value)}>
-               
-            {
-                types.map(type=>(
-                    
-                    <option key={type.url} value={type.url}>{type.name}</option>
-                ))
-            }
-            </select> 
-            <div>
-                <input type="text" value={pokemonSearched} onChange={e=>setPokemonSearched(e.target.value)}/>
-                <button onClick={searchPokemons}>Search</button>
+        <div className='pokedex'>
+            <div className='back-btn' onClick={()=>navigate("/")}><i className="fa-solid fa-angle-left"></i></div>
+            <div className='pokedex-titles'>
+                <h1>Pokedex</h1>
+                <h3>Welcome {trainer}!</h3>
             </div>
-            <ul>
-                {
-                    paginatedPokemons.map(pokemon=> (
-                        <li key={pokemon.url? pokemon.url: pokemon.pokemon.url}>
-                            <PokemonsInfo pokemonUrl={pokemon.url? pokemon.url: pokemon.pokemon.url}/>
-                        </li>
-                    ))
+            <div className={toggleCircle? "right":"left"}>
+                <h4>Search for {toggleCircle? "Pokemon": "Type"}</h4>
+                <div className='toggle' onClick={()=> setToggleCircle(!toggleCircle)}>
+                    <div className='toggle-circle'></div>
+                </div>
 
-                }
-            </ul>
+            </div>
+            <div className={toggleCircle? "right":"left"}>
+                <div className='select-box'>
+                    <select onChange={e=>filterTypes(e.target.value)}>
+                        {
+                            types.map(type=>(
+                                
+                                <option key={type.url} value={type.url}>{type.name}</option>
+                            ))
+                        }
+                    </select> 
+                    
+                </div>
+                <div className='search-box'>
+                    <input type="text" value={pokemonSearched} onChange={e=>setPokemonSearched(e.target.value)}/>
+                    <button onClick={searchPokemons}><i className="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+            </div>
+                <ul className='pokedex-container'>
+                    {
+                        paginatedPokemons.map(pokemon=> (
+                            <li key={pokemon.url? pokemon.url: pokemon.pokemon.url}>
+                                <PokemonsInfo pokemonUrl={pokemon.url? pokemon.url: pokemon.pokemon.url}/>
+                            </li>
+                        ))
+
+                    }
+                </ul>
+            <div className='pages'>
             {
                 page!==1&& (
-                    <button onClick={()=>setPage(page-1)}>Previus Page</button>
+                    <button onClick={()=>setPage(page-1)}><i className="fa-solid fa-arrow-left"></i></button>
                 )
             }
             {
@@ -88,9 +106,10 @@ const PokemonsList = () => {
             }
             {
                 page!==totalPages&&(
-                    <button onClick={()=>setPage(page+1)}>Next Page</button>
+                    <button onClick={()=>setPage(page+1)}><i className="fa-solid fa-arrow-right"></i></button>
                 )
             }
+            </div>
         </div>
     );
 };
