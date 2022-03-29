@@ -66,9 +66,11 @@ const PokemonsList = () => {
                     <h3>Welcome {trainer}!</h3>
                 </div>
                 <div className={toggleCircle? "right":"left"}>
-                    <h4 className='toggle-title'>Search for {toggleCircle? "Pokemon": "Type"}</h4>
-                    <div className='toggle' onClick={()=> setToggleCircle(!toggleCircle)}>
-                        <div className='toggle-circle'></div>
+                    <div className='toggle-box'>
+                        <h4 className='toggle-title'>Search for {toggleCircle? "Pokemon": "Type"}</h4>
+                        <div className='toggle' onClick={()=> setToggleCircle(!toggleCircle)}>
+                            <div className='toggle-circle'></div>
+                        </div>
                     </div>
 
                 </div>
@@ -85,7 +87,7 @@ const PokemonsList = () => {
                         
                     </div>
                     <div className='search-box'>
-                        <input type="text" value={pokemonSearched} onChange={e=>setPokemonSearched(e.target.value)}/>
+                        <input type="text" value={pokemonSearched} onChange={e=>setPokemonSearched(e.target.value)} placeholder="Type a pokemon name"/>
                         <button onClick={searchPokemons}><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
 

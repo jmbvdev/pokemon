@@ -53,6 +53,7 @@
     border-radius: 50%;
     position: relative;
 }
+
 .light .circle-toggle{
     left: 0;
     background-color: #066cb1;
@@ -66,14 +67,15 @@
     width: 100%;
     min-width: 100px;
     height: 30px;
-    border-radius: 30px;
+    border-radius: 10px;
     border: 0;
     outline: none;
     font-size: 14px;
     padding-left: 20px;
-    color: grey;
-    box-shadow: -10px -10px 15px rgba(91, 255, 192, 0.26), 10px 10px 15px rgba(0, 140, 255, 0.178);;
-    margin: 30px 0;
+    color:#fff;
+    margin: 15px 0;
+    background-color: #066cb1;
+    cursor: pointer;
 }
 
 /* -----------DARK MODE.............*/
