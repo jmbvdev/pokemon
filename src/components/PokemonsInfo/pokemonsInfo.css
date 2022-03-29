@@ -42,6 +42,9 @@
     .pokemon-specs p{
         line-height: 1.2em;
     }
+    .pokemon-card{
+        height: 300px;
+    }
     .pokemon-card img{
         width: 180px;
     }
