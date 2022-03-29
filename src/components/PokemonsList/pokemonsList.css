@@ -137,7 +137,7 @@ box-shadow:none;
 .pages{
 	margin: 10px;
     margin-top: 60px;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-wrap:wrap;
     justify-content:center;
