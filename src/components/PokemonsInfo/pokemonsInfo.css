@@ -17,11 +17,11 @@
     transform: scale(1.1);
 }
 .pokemon-card img{
-    width: 180px;
+    width: 150px;
     display: block;
     position: relative;
     top: 50px;
-    left: 10px;
+
 }
 .pokemon-specs{
     color: #fff;
@@ -43,7 +43,7 @@
         line-height: 1.2em;
     }
     .pokemon-card img{
-        width: 150px;
+        width: 180px;
     }
   
 }
