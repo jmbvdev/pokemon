@@ -15,7 +15,7 @@ const PokemonsList = () => {
     const isDark= useSelector(state=>state.isDark)
     const pokemonsPerPage= useSelector(state=>state.pokemonsPerPage)
     const numbersPerPage = +pokemonsPerPage
-    console.log(numbersPerPage)
+   
    
 
     ///Pagination
