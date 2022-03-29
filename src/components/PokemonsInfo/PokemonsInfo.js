@@ -6,7 +6,7 @@ import "../PokemonsInfo/pokemonsInfo.css"
 
 const PokemonsInfo = ({pokemonUrl}) => {
     const[pokemonInfo, setPokemonInfo]= useState({})
-    console.log(pokemonInfo)
+   
   
 
     useEffect(()=>{
