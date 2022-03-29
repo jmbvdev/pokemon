@@ -4,7 +4,7 @@
 .pokemon-card{
     display: flex;
     width: 250px;
-    height: 255px;
+    height: 280px;
     min-width: 250px;
     padding: 10px 0px 0px 15px;
     border-radius: 30px;
@@ -17,11 +17,11 @@
     transform: scale(1.1);
 }
 .pokemon-card img{
-    width: 150px;
+    width: 180px;
     display: block;
     position: relative;
-    top: 45px;
-    right: 10px;
+    top: 50px;
+    left: 10px;
 }
 .pokemon-specs{
     color: #fff;
