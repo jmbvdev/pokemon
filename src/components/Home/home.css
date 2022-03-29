@@ -33,32 +33,31 @@ height: 100vh;
 }
 .home-form input{
     width: 85%;
-    border: none;
+    border: solid 3px rgb(20, 20, 20);
     border-radius: 30px;
     outline: none;
     font-size: 20px;
     color: rgb(107, 107, 107);
-    box-shadow: -10px -10px 15px rgb(58 58 58 / 9%), 10px 10px 15px rgb(66 66 66 / 35%);
     transition: .5s;
-    height: 30px;
+    height: 34px;
     padding-left: 10px;
 }
 .home-form button{
     position: absolute;
-    top: 0;
     right: 0;
+    top: 2.5px;
     left: 80%;
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     outline: 0;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png);
+    background-image: url(https://w7.pngwing.com/pngs/1014/126/png-transparent-pokeball-illustration-pokemon-go-pokeball-trademark-logo-nintendo-3ds.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size:cover;
     cursor: pointer;
 }
 .home-form button:hover{
-   background-color: #fc5656;
+   opacity: 1;
 }
