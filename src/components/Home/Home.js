@@ -35,7 +35,7 @@ const Home = () => {
                     value={name}
                     onChange={e=> setName(e.target.value)}
                     />
-                    <button><i className="fa-solid fa-play"></i></button>
+                    <button></button>
                     </div>
                 </form>
             </div>

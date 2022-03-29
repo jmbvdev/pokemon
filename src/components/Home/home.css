@@ -32,7 +32,7 @@ height: 100vh;
     position: relative;
 }
 .home-form input{
-    width: 80%;
+    width: 85%;
     border: none;
     border-radius: 30px;
     outline: none;
@@ -47,15 +47,16 @@ height: 100vh;
     position: absolute;
     top: 0;
     right: 0;
-    left: 78%;
+    left: 80%;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     outline: 0;
-    background: #ff2f2f;
-    color: #fff;
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1200px-Pok%C3%A9_Ball_icon.svg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     cursor: pointer;
 }
 .home-form button:hover{
