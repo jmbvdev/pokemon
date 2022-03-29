@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
-    name: ""
+    name: "",
+    isDark: false
 
 }
 
@@ -9,6 +10,11 @@ const reducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state,
                 name: action.payload
+            }
+        case "SET_DARK":
+            return{
+                ...state,
+                isDark: !state.isDark
             }
     
         default:

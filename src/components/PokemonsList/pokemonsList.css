@@ -5,6 +5,10 @@
     align-items: center;
     font-family:'Source Sans Pro'
 }
+.dark .pokedex{
+    background-color: #060918c7;
+    color: #fff;
+}
 .pokedex-titles{
     width: 70%;
 }
@@ -13,6 +17,7 @@
     position: absolute;
     left: 100px;
     top: 0;
+    margin-top: 30px;
 }
 .pokedex-titles h3{
     margin-top: 100px; 
@@ -40,6 +45,7 @@
     background-color: #4bc5fd;
     
 }
+
 .toggle{
     width: 55px;
     height: 25px;
@@ -92,7 +98,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    top: 32px;
+    top: 30px;
+    left: 250px;
    background: transparent;
     border: none;
     color: grey;
