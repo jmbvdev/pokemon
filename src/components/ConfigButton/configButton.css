@@ -11,7 +11,6 @@
 
 .config-card{
  width: 80%;
- margin-top: 10px;
  max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@
    position: relative;
    bottom: 10px;
    border-radius: 0px 0px 30px 30px;
-   margin-bottom: 30px;
+  
 }
 .toggle-dark-mode{
     display: flex;
