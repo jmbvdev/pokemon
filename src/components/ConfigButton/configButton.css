@@ -11,7 +11,7 @@
 
 .config-card{
  width: 80%;
- margin-top: 80px;
+ margin-top: 10px;
  max-width: 400px;
   display: flex;
   flex-direction: column;
