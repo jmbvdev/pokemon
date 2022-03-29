@@ -51,7 +51,7 @@ const PokemonsList = () => {
 
     const searchPokemons=e=>{
         e.preventDefault()
-        navigate(`/pokedex/${pokemonSearched}`)
+        navigate(`/pokedex/${pokemonSearched.toLowerCase()}`)
     }
   
 
