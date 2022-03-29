@@ -2,8 +2,9 @@
 	background-color: #d8d8d8;
 	border-radius: 20px;
 	position: relative;
-	height: 20px;
+	height: 30px;
   min-width: 40vw;
+  
 }
 .progress-done {
 	background: linear-gradient(to left, #F2709C, #FF9472);

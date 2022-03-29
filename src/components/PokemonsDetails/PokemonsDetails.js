@@ -35,7 +35,7 @@ const PokemonsDetails = () => {
                         <h3>Stats Base</h3>
                         <div className='stats-container'>
                             <div className='stats'>
-                                <h4>Hp: </h4>
+                                <h4>Hp    :</h4>
                                 <ProgressBar data={pokemonsDetails.stats?.[0].base_stat} type={pokemonsDetails.types?.[0]?.type.name}/>
                             </div>
                             <div className='stats'>
