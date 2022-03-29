@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import "../ConfigButton/configButton.css"
@@ -6,6 +7,7 @@ import "../ConfigButton/configButton.css"
 const ConfigButton = () => {
 
     const isDark= useSelector(state=>state.isDark)
+    const[ perPage, setPerPage]=useState(4)
     const navigate= useNavigate()
     const dispatch= useDispatch()
     const setIsDark =()=>{
@@ -13,13 +15,23 @@ const ConfigButton = () => {
                 type: "SET_DARK"
             })
         }
-    
+    const handle=e=>{
+      e.preventDefault()
+      setPerPage(e.target.value)
+      dispatch({
+        type:"SET_POKEMONS_PER_PAGE",
+        payload: perPage
+
+      })
+
+
+    }
 
 
     return (
       <div className={isDark? "dark": "light"} >
         <div className='config-container'>
-             <div className='home-btn' onClick={()=>navigate(-1)}><i class="fa-solid fa-xmark"></i></div>
+             <div className='home-btn' onClick={()=>navigate(-1)}><i className="fa-solid fa-xmark"></i></div>
             <div className='config-card'>
               <img src="https://areajugones.sport.es/wp-content/uploads/2020/06/Clefairy-espacio.png" alt="" />
               <div className="toggle-container">
@@ -32,10 +44,10 @@ const ConfigButton = () => {
                   </div>
                 <div className='toggle-items'>
                     <h4>Pokemons Per Page</h4>
-                    <select>
-                        <option value="">4 pokemons</option>
-                        <option value="">8 pokemons</option>
-                        <option value="">10 pokemons</option>
+                    <select onChange={handle}>
+                        <option value={4}>4 pokemons</option>
+                        <option value={8}>8 pokemons</option>
+                        <option value={10}>10 pokemons</option>
                     </select>
                 </div>
 

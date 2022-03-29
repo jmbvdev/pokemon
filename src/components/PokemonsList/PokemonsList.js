@@ -63,7 +63,7 @@ const PokemonsList = () => {
                     <h3>Welcome {trainer}!</h3>
                 </div>
                 <div className={toggleCircle? "right":"left"}>
-                    <h4>Search for {toggleCircle? "Pokemon": "Type"}</h4>
+                    <h4 className='toggle-title'>Search for {toggleCircle? "Pokemon": "Type"}</h4>
                     <div className='toggle' onClick={()=> setToggleCircle(!toggleCircle)}>
                         <div className='toggle-circle'></div>
                     </div>

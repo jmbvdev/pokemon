@@ -25,7 +25,7 @@ const Home = () => {
          <div className={isDark? "dark":"light"}>       
         <div className="home-container">
                 <div className="home-welcome">
-                    <h2>WELCOME TRAINER!</h2>
+                    <h2>HELLO TRAINER!</h2>
                     <img src="https://www.seekpng.com/png/full/345-3459799_starmetroids-vgc-2015-retrospective-pokemon-alpha-sapphire-trainer.png" alt="" />
                     <p>Give me your name to start</p>
                 </div>

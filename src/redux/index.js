@@ -1,6 +1,7 @@
 const INITIAL_STATE = {
     name: "",
-    isDark: false
+    isDark: false,
+    pokemonsPerPage: null
 
 }
 
@@ -16,7 +17,12 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 isDark: !state.isDark
             }
-    
+        case "SET_POKEMONS_PER_PAGE":
+            return{
+                ...state,
+                pokemonsPerPage: action.payload
+            }
+
         default:
            return state;
     }

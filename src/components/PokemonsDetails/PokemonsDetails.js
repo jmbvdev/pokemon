@@ -2,8 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
-import "../PokemonsDetails/pokemonsDetails.css"
 import ProgressBar from '../ProgressBar/ProgressBar';
+import PokemonsColors from '../PokemonsColors';
+import "../PokemonsDetails/pokemonsDetails.css"
 const PokemonsDetails = () => {
     const {id}= useParams()
     const [pokemonsDetails, setPokemonsDetails]= useState({})
@@ -19,7 +20,7 @@ const PokemonsDetails = () => {
                 <div className='back-btn' onClick={()=>navigate("/pokedex")}><i className="fa-solid fa-angle-left"></i></div>
                 <div className='home-btn' onClick={()=>navigate("/")}><i className="fa-solid fa-house"></i></div>
                 <div className='config-btn' onClick={()=>navigate("/config")}><i className="fa-solid fa-gear"></i></div>
-                <div className='pokemon-details'>
+                <div className='pokemon-details' style={{background: `${PokemonsColors(pokemonsDetails.types?.[0]?.type.name)}`}}>
                     <div className='pokemon-title'>
                         <h1>{pokemonsDetails.name}</h1>
                         <h4>#0{pokemonsDetails.id}</h4>
@@ -35,7 +36,7 @@ const PokemonsDetails = () => {
                         <div className='stats-container'>
                             <div className='stats'>
                                 <h4>Hp: </h4>
-                                <ProgressBar data={pokemonsDetails.stats?.[0].base_stat}/>
+                                <ProgressBar data={pokemonsDetails.stats?.[0].base_stat} type={pokemonsDetails.types?.[0]?.type.name}/>
                             </div>
                             <div className='stats'>
                                 <h4>Defense: </h4>
@@ -53,8 +54,8 @@ const PokemonsDetails = () => {
                                 <img src={pokemonsDetails.sprites?.back_default} alt="" />
                                 <img src={pokemonsDetails.sprites?.front_default} alt="" />
                                 <div className='measures-spescs'>
-                                    <h5> Weight: {pokemonsDetails.weight} </h5>
-                                    <h5>Height: {pokemonsDetails.height} </h5>
+                                    <h5 style={{background: `${PokemonsColors(pokemonsDetails.types?.[0]?.type.name)}`}}> Weight: {pokemonsDetails.weight} </h5>
+                                    <h5 style={{background: `${PokemonsColors(pokemonsDetails.types?.[0]?.type.name)}`}}>Height: {pokemonsDetails.height} </h5>
                                 </div>
 
                             </div>

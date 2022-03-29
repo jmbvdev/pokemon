@@ -4,6 +4,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
+    font-family: "Source Sans pro";
 }
 .dark .details-container{
     background-color: #0014419d;
@@ -12,7 +13,6 @@
 
 .pokemon-details{
     margin-bottom: 30px;
-    background-color: aquamarine;
     margin-top: 100px;
     width: 90%;
     max-width: 700px;
@@ -30,7 +30,7 @@
     text-shadow: 0 0 1.4px #000;
 }
 .pokemon-details img{
-    width: 150px;
+    width: 200px;
     position: relative;
     top: 35px;
 }
@@ -38,7 +38,7 @@
     display: flex;
     justify-content: space-evenly;
     color: #fff;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .pokemon-types h5{
@@ -46,7 +46,7 @@
     background: hsla(0,0%,100%,.2);
     color: #fff;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 5px 12px;
     text-shadow: 0 0 1.4px #000;
 }
@@ -54,15 +54,18 @@
     background-color: #fff;
     border-radius: 30px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    font-family: 'Press Start 2P';
+    font-size: 10px;
     
 }
 .pokemon-stats h3{
   position: relative;
-  top: 30px;
-
+  top: 40px;
+  font-family: "Source Sans pro";
+  font-size: 1.4rem;
 }
 .stats-container{
-    margin-top: 40px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     
@@ -71,34 +74,38 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 15px;
+      
 }
 
 .measures{
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .measures img{
-    width: 150px;
+    width: 200px;
     position: relative;
     top: 10px;
 }
 .measures-spescs{
     position: relative;
     right: 25px;
-    width: 30%;
+    width: 100px;
+ 
+   
 }
 .measures-spescs h5{
     border-radius: 15px;
     background: hsla(0,0%,100%,.2);
-    background-color: aqua;
     color: #fff;
     text-decoration: none;
     font-size: 12px;
     padding: 5px 12px;
     margin: 6px;
     text-shadow: 0 0 1.4px #000;
+    font-family: "Source Sans pro";
 }
 .home-btn{
     background-color: #03a9f4;
@@ -144,4 +151,12 @@
 }
 .config-btn:hover{
     background-color: #2cb4f3;
+}
+
+@media only screen and (min-width: 768px) {
+   
+    .pokemon-stats{
+        font-size: 0.8rem;
+        
+    }
 }
