@@ -40,15 +40,15 @@ const PokemonsDetails = () => {
                             </div>
                             <div className='stats'>
                                 <h4>Defense: </h4>
-                                <ProgressBar data={pokemonsDetails.stats?.[2].base_stat}/>
+                                <ProgressBar data={pokemonsDetails.stats?.[2].base_stat}  type={pokemonsDetails.types?.[0]?.type.name}/>
                             </div>
                             <div className='stats'>
                                 <h4>Attack: </h4>
-                                <ProgressBar data={pokemonsDetails.stats?.[1].base_stat}/>
+                                <ProgressBar data={pokemonsDetails.stats?.[1].base_stat}  type={pokemonsDetails.types?.[0]?.type.name}/>
                             </div>
                             <div className='stats'>
                                 <h4>Speed: </h4>
-                                <ProgressBar data={pokemonsDetails.stats?.[5].base_stat}/>
+                                <ProgressBar data={pokemonsDetails.stats?.[5].base_stat}  type={pokemonsDetails.types?.[0]?.type.name}/>
                             </div>
                             <div className='measures'>
                                 <img src={pokemonsDetails.sprites?.back_default} alt="" />

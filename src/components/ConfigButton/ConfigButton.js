@@ -40,7 +40,7 @@ const ConfigButton = () => {
                 <div className='toggle-items'>
                     <h4>Pokemons Per Page</h4>
                     <select onChange={handle} defaultValue={+pokemonsPerPage}>
-                        <option value={4}>4 pokemons</option>
+                        <option value={6}>6 pokemons</option>
                         <option value={8}>8 pokemons</option>
                         <option value={10}>10 pokemons</option>
                     </select>

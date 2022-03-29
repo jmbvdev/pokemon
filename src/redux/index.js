@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
     name: "",
     isDark: false,
-    pokemonsPerPage: "4"
+    pokemonsPerPage: "6"
 
 }
 
