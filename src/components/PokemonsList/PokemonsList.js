@@ -13,14 +13,17 @@ const PokemonsList = () => {
     const[page,setPage]= useState(1)
     const trainer = useSelector(state=>state.name)
     const isDark= useSelector(state=>state.isDark)
+    const pokemonsPerPage= useSelector(state=>state.pokemonsPerPage)
+    const numbersPerPage = +pokemonsPerPage
+    console.log(numbersPerPage)
    
 
     ///Pagination
-    const pokemonsPerPage=6;
-    const lastPokemonIndex= page* pokemonsPerPage;
-    const firstPokemonIndex=lastPokemonIndex-pokemonsPerPage;
+ 
+    const lastPokemonIndex= page* numbersPerPage;
+    const firstPokemonIndex=lastPokemonIndex-numbersPerPage;
     const paginatedPokemons= pokemons.slice(firstPokemonIndex,lastPokemonIndex);
-    const totalPages=Math.ceil(pokemons.length/pokemonsPerPage);
+    const totalPages=Math.ceil(pokemons.length/numbersPerPage);
     const[toggleCircle, setToggleCircle]= useState(false)
     let pagesNumber=[];
     

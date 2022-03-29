@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import "../ConfigButton/configButton.css"
@@ -7,7 +6,7 @@ import "../ConfigButton/configButton.css"
 const ConfigButton = () => {
 
     const isDark= useSelector(state=>state.isDark)
-    const[ perPage, setPerPage]=useState(4)
+    const {pokemonsPerPage} = useSelector(state=>state)
     const navigate= useNavigate()
     const dispatch= useDispatch()
     const setIsDark =()=>{
@@ -17,14 +16,10 @@ const ConfigButton = () => {
         }
     const handle=e=>{
       e.preventDefault()
-      setPerPage(e.target.value)
       dispatch({
         type:"SET_POKEMONS_PER_PAGE",
-        payload: perPage
-
+        payload: e.target.value
       })
-
-
     }
 
 
@@ -44,7 +39,7 @@ const ConfigButton = () => {
                   </div>
                 <div className='toggle-items'>
                     <h4>Pokemons Per Page</h4>
-                    <select onChange={handle}>
+                    <select onChange={handle} defaultValue={+pokemonsPerPage}>
                         <option value={4}>4 pokemons</option>
                         <option value={8}>8 pokemons</option>
                         <option value={10}>10 pokemons</option>
